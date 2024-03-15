@@ -1,4 +1,4 @@
- # <img src="logo.png" height="80" width="80"> BizMonX
+ # <img src="profile/logo.png" height="80" width="80"> BizMonX
 
 **W I P**
 
