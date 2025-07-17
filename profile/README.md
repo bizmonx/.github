@@ -1,4 +1,4 @@
- # <img src="profile/logo.png" height="80" width="80"> BizMonX
+ # BizMonX
 
 **W I P**
 
@@ -32,7 +32,7 @@ keeping the parts that are still very much relevant today.
 
 Just the start, but here are the goals:
 
--> gradually rewrite using ziglang
+-> gradually rewrite using zig
 
 1. move build to zig
 2. rewrite frontend! 
@@ -50,7 +50,6 @@ Just the start, but here are the goals:
 ## Doing
 - write frontend using [Zap](https://github.com/zigzap/zap)
 - migrate Xymon build to zig and push all monkey patching from dockerfile/startup script to build
-- finishing [ziglings](https://ziglings.org/): a practical guide to learning Zig
 - write endpoint for: 
     - download hosts.cfg
     - upload hosts.cfg
@@ -67,35 +66,7 @@ Just the start, but here are the goals:
 
 
 ## Why Zig, not Go/Rust?
-Learning Zig and reconnecting with C.  Go would be the obvious choice.  Rust, I don't know, had it been big data ...
+Zig works extremely well with C and allows for gradual migration.
 
 
-Would have gone with Rust for a complete re-write.
 
-Love Go for its simplicity.  The channels are already there.  Makes sense and with htmx, would have been 
-an excellent choice.  However, Zig allows me to migrate and rework parts and even just reuse really easily.
-
-## Get Started
-Get the docker image, or cook your own.
-
-linux/amd64
-
-debian 12
-```bash 
-docker pull jeroenflvr/bizmonx:deb12-0.1.3
-```
-
-ubi9
-```bash 
-docker pull jeroenflvr/bizmonx:ubi9-0.1.3
-```
-
-## Environment Variables
-| var | default value | description |
-| --- | ------------- | ----------- |
-| XYMON_HOST | localhost | hostname for xymon web server |
-| XYMON_PORT | 1984 | port xymond listens on |
-| XYMON_WEB_SERVER_PORT | 8080 | port for the apache web server |
-| XYMON_GATEWAY_SERVER_PORT | 1976 | port for the gateway server |
-| XYMON_BADGE | Xymon | the name which appears under the navigation bar on the left |
-| TZ | Europe/Brussels | timezone |
